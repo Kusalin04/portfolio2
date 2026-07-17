@@ -1,110 +1,139 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - หน้าหลัก</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Prompt", sans-serif;
+}
 
-        body{
-            background:#f2f2f2;
-        }
+body{
+    background:#f2f2f2;
+    color:#555;
+}
 
-        header{
-            background:#bdbdbd;
-            color:#424242;
-            padding:20px;
-            text-align:center;
-        }
+/* เมนู */
+header{
+    background:#7a7a7a;
+    padding:20px;
+}
 
-        header h2{
-            color:#424242;
-        }
+nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
 
-        nav{
-            background:#9e9e9e;
-            padding:12px;
-            text-align:center;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 15px;
-            font-weight:bold;
-        }
+nav a:hover{
+    color:#dddddd;
+}
 
-        .hero{
-            height:80vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:#e0e0e0;
-            color:#424242;
-        }
+/* ส่วนเนื้อหา */
+section{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
 
-        .hero h1{
-            font-size:48px;
-            margin-bottom:15px;
-        }
+h2{
+    color:#555555;   /* สีเทาเข้มกว่า */
+    margin-bottom:15px;
+    border-left:6px solid #7a7a7a;
+    padding-left:10px;
+}
 
-        .hero p{
-            font-size:20px;
-            margin-bottom:25px;
-        }
+p, li{
+    color:#777;
+    line-height:1.8;
+}
 
-        .btn{
-            background:#616161;
-            color:white;
-            padding:12px 25px;
-            text-decoration:none;
-            border-radius:5px;
-            font-weight:bold;
-        }
+ul{
+    padding-left:20px;
+}
 
-        .btn:hover{
-            background:#424242;
-        }
+footer{
+    background:#7a7a7a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
 
-        footer{
-            background:#9e9e9e;
-            color:white;
-            text-align:center;
-            padding:15px;
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <h2>My Portfolio</h2>
+    <nav>
+        <a href="#home">หน้าหลัก</a>
+        <a href="#about">ประวัติส่วนตัว</a>
+        <a href="#education">ประวัติการศึกษา</a>
+        <a href="#portfolio">ผลงาน</a>
+        <a href="#skills">ทักษะ</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="about.html">เกี่ยวกับฉัน</a>
-    <a href="skills.html">ทักษะ</a>
-    <a href="projects.html">ผลงาน</a>
-    <a href="contact.html">ติดต่อ</a>
-</nav>
+<section id="home">
+    <h2>หน้าหลัก</h2>
+    <p>
+        ยินดีต้อนรับสู่เว็บไซต์ Portfolio 
+    </p>
+</section>
 
-<section class="hero">
-    <h1>สวัสดี ยินดีต้อนรับ</h1>
-    <p>นี่คือเว็บไซต์ Portfolio ของฉัน</p>
-    <a href="about.html" class="btn">รู้จักฉันเพิ่มเติม</a>
+<section id="about">
+    <h2>ประวัติส่วนตัว</h2>
+    <p><strong>ชื่อ :</strong> กุศลิน ชุมทัพวงษ์</p>
+    <p><strong>วันเกิด :</strong> 27 พฤศจิกายน 2551</p>
+    <p><strong>อายุ :</strong> 17 ปี</p>
+    <p><strong>อีเมล :</strong> kkusalin@gmail.com</p>
+</section>
+
+<section id="education">
+    <h2>ประวัติการศึกษา</h2>
+    <ul>
+        <li>ระดับประถมศึกษา : โรงเรียนบ้านหัวนาคำ</li>
+        <li>ระดับมัธยมศึกษา : โรงเรียนวัฒนานุศาสน์</li>
+    </ul>
+</section>
+
+<section id="portfolio">
+    <h2>ผลงาน</h2>
+    <ul>
+        <li>ผลงานที่ 1</li>
+        <li>ผลงานที่ 2</li>
+        <li>ผลงานที่ 3</li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>ทักษะ</h2>
+    <ul>
+        <li>HTML ⭐⭐⭐⭐☆</li>
+        <li>CSS ⭐⭐⭐⭐☆</li>
+        <li>JavaScript ⭐⭐⭐☆☆</li>
+        <li>Microsoft Office ⭐⭐⭐⭐☆</li>
+    </ul>
 </section>
 
 <footer>
-    <p>&copy; 2026 My Portfolio</p>
+    © 2026 Portfolio
 </footer>
 
 </body>
