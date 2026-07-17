@@ -292,3 +292,168 @@ function openPage(page){
 
 </body>
 </html>
+/* ตั้งค่าพื้นฐาน */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* พื้นหลังเว็บไซต์ */
+body{
+    background:#eeeeee;
+    color:#666666;
+}
+
+
+/* แถบเมนู */
+header{
+    background:#808080;
+    padding:20px;
+    text-align:center;
+}
+
+
+/* ปุ่มเมนู */
+button{
+
+    background:#666666;
+    color:white;
+
+    border:none;
+    padding:12px 20px;
+
+    margin:5px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+}
+
+
+/* เมื่อนำเมาส์ไปวาง */
+button:hover{
+
+    background:#444444;
+
+}
+
+
+
+/* กล่องเนื้อหาแต่ละหน้า */
+.content{
+
+    display:none;
+
+    width:80%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px #bbbbbb;
+
+}
+
+
+
+/* หน้าที่กำลังเปิด */
+.active{
+
+    display:block;
+
+}
+
+
+
+/* หัวข้อ */
+h1{
+
+    color:#444444;
+
+    border-left:8px solid #666666;
+
+    padding-left:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ข้อความ */
+p, li{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* รายการ */
+ul{
+
+    padding-left:30px;
+
+}
+
+
+
+/* ส่วนท้าย */
+footer{
+
+    background:#808080;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    margin-top:50px;
+
+}
+
+
+
+/* ทำให้รองรับมือถือ */
+@media screen and (max-width:768px){
+
+    .content{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+
+    button{
+
+        width:90%;
+
+        margin:5px auto;
+
+    }
+
+
+    h1{
+
+        font-size:25px;
+
+    }
+
+}
