@@ -3,138 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Prompt", sans-serif;
-}
 
 body{
-    background:#f2f2f2;
-    color:#555;
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#eeeeee;
+    color:#666666;
 }
 
-/* เมนู */
+
+/* ส่วนเมนู */
 header{
-    background:#7a7a7a;
+    background:#808080;
     padding:20px;
+    text-align:center;
 }
 
-nav{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-}
 
-nav a{
+button{
+    background:#666666;
     color:white;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    transition:0.3s;
+    border:none;
+    padding:12px 20px;
+    margin:5px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
 }
 
-nav a:hover{
-    color:#dddddd;
+
+button:hover{
+    background:#444444;
 }
 
-/* ส่วนเนื้อหา */
-section{
+
+
+/* กล่องข้อมูลแต่ละหน้า */
+
+.content{
+
+    display:none;
     width:80%;
     margin:40px auto;
     background:white;
-    padding:30px;
+    padding:35px;
     border-radius:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    box-shadow:0 5px 15px #bbbbbb;
+
 }
 
-h2{
-    color:#555555;   /* สีเทาเข้มกว่า */
-    margin-bottom:15px;
-    border-left:6px solid #7a7a7a;
-    padding-left:10px;
+
+.active{
+    display:block;
 }
 
-p, li{
-    color:#777;
+
+
+/* หัวข้อ */
+
+h1{
+
+    color:#444444;
+    border-left:8px solid #666666;
+    padding-left:15px;
+
+}
+
+
+
+p,li{
+
+    font-size:18px;
     line-height:1.8;
+
 }
 
-ul{
-    padding-left:20px;
-}
+
 
 footer{
-    background:#7a7a7a;
+
+    background:#808080;
     color:white;
     text-align:center;
     padding:15px;
-    margin-top:30px;
+    margin-top:50px;
+
 }
+
+
 </style>
 
 </head>
+
+
 <body>
 
+
 <header>
-    <nav>
-        <a href="#home">หน้าหลัก</a>
-        <a href="#about">ประวัติส่วนตัว</a>
-        <a href="#education">ประวัติการศึกษา</a>
-        <a href="#portfolio">ผลงาน</a>
-        <a href="#skills">ทักษะ</a>
-    </nav>
+
+<button onclick="openPage('home')">
+หน้าหลัก
+</button>
+
+<button onclick="openPage('profile')">
+ประวัติส่วนตัว
+</button>
+
+<button onclick="openPage('education')">
+ประวัติการศึกษา
+</button>
+
+<button onclick="openPage('portfolio')">
+ผลงาน
+</button>
+
+<button onclick="openPage('skill')">
+ทักษะ
+</button>
+
+
 </header>
 
-<section id="home">
-    <h2>หน้าหลัก</h2>
-    <p>
-        ยินดีต้อนรับสู่เว็บไซต์ Portfolio 
-    </p>
-</section>
 
-<section id="about">
-    <h2>ประวัติส่วนตัว</h2>
-    <p><strong>ชื่อ :</strong> กุศลิน ชุมทัพวงษ์</p>
-    <p><strong>วันเกิด :</strong> 27 พฤศจิกายน 2551</p>
-    <p><strong>อายุ :</strong> 17 ปี</p>
-    <p><strong>อีเมล :</strong> kkusalin@gmail.com</p>
-</section>
 
-<section id="education">
-    <h2>ประวัติการศึกษา</h2>
-    <ul>
-        <li>ระดับประถมศึกษา : โรงเรียนบ้านหัวนาคำ</li>
-        <li>ระดับมัธยมศึกษา : โรงเรียนวัฒนานุศาสน์</li>
-    </ul>
-</section>
 
-<section id="portfolio">
-    <h2>ผลงาน</h2>
-    <ul>
-        <li>ผลงานที่ 1</li>
-        <li>ผลงานที่ 2</li>
-        <li>ผลงานที่ 3</li>
-    </ul>
-</section>
+<!-- หน้าที่ 1 -->
 
-<section id="skills">
-    <h2>ทักษะ</h2>
-    <ul>
-        <li>HTML ⭐⭐⭐⭐☆</li>
-        <li>CSS ⭐⭐⭐⭐☆</li>
-        <li>JavaScript ⭐⭐⭐☆☆</li>
-        <li>Microsoft Office ⭐⭐⭐⭐☆</li>
-    </ul>
-</section>
+<div id="home" class="content active">
+
+<h1>ยินดีต้อนรับ</h1>
+
+<p>
+ยินดีต้อนรับเข้าสู่ Portfolio 
+</p>
+
+</div>
+
+
+
+
+
+<!-- หน้าที่ 2 -->
+
+<div id="profile" class="content">
+
+<h1>ประวัติส่วนตัว</h1>
+
+<p>ชื่อ : กุศลิน ชุมทัพวงษ์</p>
+
+<p>วันเกิด : 27 พฤศจิกายน 2551</p>
+
+<p>อายุ : 17ปี</p>
+
+<p>งานอดิเรก : ดูหนัง ฟังเพลง</p>
+
+
+</div>
+
+
+
+
+
+<!-- หน้าที่ 3 -->
+
+<div id="education" class="content">
+
+<h1>ประวัติการศึกษา</h1>
+
+<ul>
+
+<li>
+ระดับประถมศึกษา : โรงเรียนบ้านหัวนำคำ
+</li>
+
+<li>
+ระดับมัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์
+</li>
+
+<li>
+ระดับมัธยมศึกษาตอนปลาย : โรงเรียนวัฒนานุศาสน์
+</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<!-- หน้าที่ 4 -->
+
+<div id="portfolio" class="content">
+
+<h1>ผลงาน</h1>
+
+<ul>
+
+<li>
+สร้างเว็บไซต์ Portfolio
+</li>
+
+<li>
+ออกแบบงานกราฟิก
+</li>
+
+<li>
+ทำโครงงานด้านคอมพิวเตอร์
+</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<!-- หน้าที่ 5 -->
+
+<div id="skill" class="content">
+
+<h1>ทักษะ</h1>
+
+<ul>
+
+<li>
+HTML / CSS
+</li>
+
+<li>
+JavaScript
+</li>
+
+<li>
+Microsoft Office
+</li>
+
+<li>
+การออกแบบเว็บไซต์
+</li>
+
+</ul>
+
+</div>
+
+
+
+
 
 <footer>
-    © 2026 Portfolio
+
+Portfolio Website © 2026
+
 </footer>
+
+
+
+
+
+<script>
+
+
+function openPage(page){
+
+    let pages = document.querySelectorAll(".content");
+
+
+    pages.forEach(function(item){
+
+        item.classList.remove("active");
+
+    });
+
+
+    document.getElementById(page)
+    .classList.add("active");
+
+}
+
+
+</script>
+
 
 </body>
 </html>
