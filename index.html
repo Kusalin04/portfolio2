@@ -4,36 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio </title>
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 body{
     font-family:Tahoma,sans-serif;
-    background:linear-gradient(-45deg,#98FB98,#66CDAA,#20B2AA,#7CFC00);
+    background:linear-gradient(-45deg,#f8f9fa,#eceff1,#e0e0e0,#f5f5f5);
     background-size:400% 400%;
-    animation:bgmove 10s ease infinite;
+    animation:bgmove 12s ease infinite;
     overflow-x:hidden;
 }
-
 @keyframes bgmove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
-
 .menu{
-    background:rgba(0,100,0,.8);
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 20px green;
+    background:rgba(80,80,80,.75);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
     padding:18px;
     text-align:center;
 }
-
 .menu a{
     color:white;
     text-decoration:none;
@@ -42,30 +37,26 @@ body{
     font-weight:bold;
     transition:.4s;
 }
-
 .menu a:hover{
-    color:yellow;
-    text-shadow:0 0 15px yellow;
+    color:#ffffff;
+    text-shadow:0 0 10px #d6d6d6;
 }
-
 .card{
     width:500px;
     margin:50px auto;
     padding:35px;
     text-align:center;
     border-radius:25px;
-    background:rgba(255,255,255,.2);
+    background:rgba(255,255,255,.55);
     backdrop-filter:blur(15px);
-    border:2px solid rgba(255,255,255,.3);
-    box-shadow:0 8px 35px rgba(0,0,0,.3);
+    border:2px solid rgba(255,255,255,.5);
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
     transition:.5s;
 }
-
 .card:hover{
     transform:translateY(-15px) scale(1.03);
-    box-shadow:0 0 40px white;
+    box-shadow:0 0 30px rgba(180,180,180,.6);
 }
-
 .profile{
     width:220px;
     height:220px;
@@ -75,94 +66,71 @@ body{
     animation:glow 2s infinite alternate;
     transition:.5s;
 }
-
 .profile:hover{
-    transform:scale(1.1) rotate(8deg);
+    transform:scale(1.08) rotate(5deg);
 }
-
 @keyframes glow{
     from{
-        box-shadow:0 0 15px white;
+        box-shadow:0 0 10px #d9d9d9;
     }
     to{
-        box-shadow:0 0 50px #7CFC00,
-                   0 0 80px white;
+        box-shadow:0 0 25px #bdbdbd;
     }
 }
-
 h1{
-    color:white;
-    text-shadow:0 0 15px #00ff66;
+    color:#444;
+    text-shadow:none;
 }
-
 h2{
-    color:white;
+    color:#666;
 }
-
 p{
-    color:white;
+    color:#555;
     font-size:20px;
     margin:10px;
 }
-
 footer{
     text-align:center;
-    color:white;
+    color:#666;
     padding:20px;
 }
-
 .snowflake{
     position:fixed;
     top:-50px;
-    color:white;
+    color:#d0d0d0;
     pointer-events:none;
     z-index:9999;
 }
 </style>
 </head>
-
 <body>
-
 <div class="menu">
     <a href="Profile.html">🏠 ประวัติส่วนตัว</a>
     <a href="education.html">🎓 ประวัติการศึกษา</a>
     <a href="Award.html">🏆 ผลงาน</a>
     <a href="contact.html">📞 ติดต่อ</a>
 </div>
-
 <div class="card">
-
 <img src="images/myphoto.jpg" class="profile">
-
 <h1>นางสาวกุศลิน ชุมทัพวงษ์</h1>
-
-<h2> Portfolio </h2>
-
-<p>นักเรียนโรงเรียนพานทอง</p>
-
-<p>🌿 โรงเรียนพานทอง 🌿</p>
-
+<h2>Portfolio</h2>
+<p></p>
+<p>โรงเรียนพานทอง</p>
 </div>
-
 <footer>
-© 2026 Portfolio by Siriporn
+© 2026 Portfolio by Kusalin
 </footer>
 <script>
 // ====== หิมะ ======
 const snowCount = 120;
-
 for(let i=0;i<snowCount;i++){
-
     const snow=document.createElement("div");
     snow.className="snowflake";
     snow.innerHTML=["❄","❅","❆"][Math.floor(Math.random()*3)];
-
     snow.style.left=Math.random()*100+"vw";
     snow.style.fontSize=(Math.random()*18+8)+"px";
-    snow.style.opacity=Math.random()*0.6+0.4;
-
+    snow.style.opacity=Math.random()*0.5+0.3;
     document.body.appendChild(snow);
-
     snow.animate([
         {transform:"translate(0,-50px) rotate(0deg)"},
         {transform:`translate(${Math.random()*50-25}px,35vh) rotate(120deg)`},
@@ -175,22 +143,17 @@ for(let i=0;i<snowCount;i++){
         easing:"linear"
     });
 }
-
 // ====== ดาวและประกาย ======
 setInterval(()=>{
-
     const star=document.createElement("div");
-    star.innerHTML=["✨","🪐","🤍","🌻"][Math.floor(Math.random()*4)];
-
+    star.innerHTML=["✨","⭐","🤍","✦"][Math.floor(Math.random()*4)];
     star.style.position="fixed";
     star.style.left=Math.random()*100+"vw";
     star.style.top="100vh";
     star.style.fontSize=(10+Math.random()*20)+"px";
     star.style.pointerEvents="none";
     star.style.zIndex="9998";
-
     document.body.appendChild(star);
-
     star.animate([
         {
             transform:"translateY(0) scale(0.5)",
@@ -205,13 +168,10 @@ setInterval(()=>{
         iterations:1,
         easing:"ease-out"
     });
-
     setTimeout(()=>{
         star.remove();
     },6000);
-
 },300);
 </script>
-
 </body>
 </html>
