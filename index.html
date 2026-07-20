@@ -3,292 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portfolio</title>
+<title>My Portfolio</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
 
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#eeeeee;
-    color:#666666;
-}
-
-
-/* ส่วนเมนู */
-header{
-    background:#808080;
-    padding:20px;
-    text-align:center;
-}
-
-
-button{
-    background:#666666;
+    background:#0f172a;
     color:white;
-    border:none;
-    padding:12px 20px;
-    margin:5px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
 }
 
-
-button:hover{
-    background:#444444;
+header{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    background:rgba(15,23,42,.9);
+    backdrop-filter:blur(10px);
 }
 
-
-
-/* กล่องข้อมูลแต่ละหน้า */
-
-.content{
-
-    display:none;
-    width:80%;
-    margin:40px auto;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 15px #bbbbbb;
-
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
 }
 
-
-.active{
-    display:block;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
 }
 
-
-
-/* หัวข้อ */
-
-h1{
-
-    color:#444444;
-    border-left:8px solid #666666;
-    padding-left:15px;
-
+nav a:hover{
+    color:#38bdf8;
 }
 
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:100px 10%;
+    gap:80px;
+}
 
+.hero img{
+    width:320px;
+    border-radius:50%;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 30px #38bdf8;
+}
 
-p,li{
+.text h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
 
-    font-size:18px;
+.text h1{
+    font-size:55px;
+}
+
+.text h2{
+    margin:15px 0;
+    color:#94a3b8;
+}
+
+.text p{
     line-height:1.8;
-
+    margin-bottom:25px;
 }
 
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
+.btn:hover{
+    transform:scale(1.08);
+}
+
+section{
+    padding:90px 10%;
+}
+
+.title{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
 
 footer{
-
-    background:#808080;
-    color:white;
     text-align:center;
-    padding:15px;
-    margin-top:50px;
-
+    padding:25px;
+    background:#020617;
 }
-
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <header>
+    <div class="logo">Portfolio</div>
 
-<button onclick="openPage('home')">
-หน้าหลัก
-</button>
-
-<button onclick="openPage('profile')">
-ประวัติส่วนตัว
-</button>
-
-<button onclick="openPage('education')">
-ประวัติการศึกษา
-</button>
-
-<button onclick="openPage('portfolio')">
-ผลงาน
-</button>
-
-<button onclick="openPage('skill')">
-ทักษะ
-</button>
-
-
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
+<section class="hero">
 
+    <div class="text">
+        <h3>Hello, I'm</h3>
+        <h1>กุศลิน ชุมทัพวงษ์</h1>
+        <h2>Student | Future Radiologic Technologist</h2>
 
+        <p>
+            สวัสดีค่ะ ยินดีต้อนรับสู่ Portfolio ของฉัน
+            เว็บไซต์นี้รวบรวมประวัติ ผลงาน ทักษะ และข้อมูลการติดต่อ
+            เพื่อแสดงความสามารถและประสบการณ์ในการเรียนรู้
+        </p>
 
-<!-- หน้าที่ 1 -->
+        <a href="#" class="btn">Download Resume</a>
+    </div>
 
-<div id="home" class="content active">
+    <img src="profile.jpg" alt="Profile">
 
-<h1>ยินดีต้อนรับ</h1>
+</section>
 
-<p>
-ยินดีต้อนรับสู่ Portfolio 
+<section>
+    <h2 class="title">About Me</h2>
 
-</p>
+    <div class="cards">
+        <div class="card">
+            <h3>🎓 Education</h3>
+            <p>กำลังศึกษาระดับมัธยมศึกษาตอนปลาย และสนใจศึกษาต่อด้านรังสีเทคนิค</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Skills</h3>
+            <p>HTML, CSS, JavaScript, Canva, Microsoft Office</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Goal</h3>
+            <p>มุ่งมั่นพัฒนาตนเองเพื่อเป็นนักรังสีเทคนิคที่มีความรู้ ความสามารถ และมีจริยธรรม</p>
+        </div>
+    </div>
+
+</section>
+
+<section>
+
+<h2 class="title">My Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Resume Design</h3>
+<p>ออกแบบ Resume ด้วย Canva และ HTML</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS</p>
+</div>
+
+<div class="card">
+<h3>School Projects</h3>
+<p>ผลงานด้านวิทยาศาสตร์ คณิตศาสตร์ และการเขียนโปรแกรม</p>
+</div>
 
 </div>
 
-
-
-
-
-<!-- หน้าที่ 2 -->
-
-<div id="profile" class="content">
-
-<h1>ประวัติส่วนตัว</h1>
-
-<p>ชื่อ : กุศลิน ชุมทัพวงษ์</p>
-
-<p>วันเกิด : 27 พฤศจิกายน 2551</p>
-
-<p>อายุ : 17ปี</p>
-
-<p>งานอดิเรก : ดูหนัง ฟังเพลง</p>
-
-</div>
-
-
-
-
-
-<!-- หน้าที่ 3 -->
-
-<div id="education" class="content">
-
-<h1>ประวัติการศึกษา</h1>
-
-<ul>
-
-<li>
-ระดับประถมศึกษา : โรงเรียนวัฒนานุศาสน์
-</li>
-
-<li>
-ระดับมัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์
-</li>
-
-<li>
-ระดับมัธยมศึกษาตอนปลาย : โรงเรียนพานทอง
-</li>
-
-</ul>
-
-</div>
-
-
-
-
-
-<!-- หน้าที่ 4 -->
-
-<div id="portfolio" class="content">
-
-<h1>ผลงาน</h1>
-
-<ul>
-
-<li>
-สร้างเว็บไซต์ Portfolio
-</li>
-
-<li>
-ออกแบบงานกราฟิก
-</li>
-
-<li>
-ทำโครงงานด้านคอมพิวเตอร์
-</li>
-
-</ul>
-
-</div>
-
-
-
-
-
-<!-- หน้าที่ 5 -->
-
-<div id="skill" class="content">
-
-<h1>ทักษะ</h1>
-
-<ul>
-
-<li>
-HTML / CSS
-</li>
-
-<li>
-JavaScript
-</li>
-
-<li>
-Microsoft Office
-</li>
-
-<li>
-การออกแบบเว็บไซต์
-</li>
-
-</ul>
-
-</div>
-
-
-
-
+</section>
 
 <footer>
-
-Portfolio Website © 2026
-
+© 2026 My Portfolio | Designed by กุศลิน
 </footer>
-
-
-
-
-
-<script>
-
-
-function openPage(page){
-
-    let pages = document.querySelectorAll(".content");
-
-
-    pages.forEach(function(item){
-
-        item.classList.remove("active");
-
-    });
-
-
-    document.getElementById(page)
-    .classList.add("active");
-
-}
-
-
-</script>
-
 
 </body>
 </html>
