@@ -15,133 +15,47 @@
 
 body{
     background:linear-gradient(135deg,#f5f5f5,#dcdcdc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:#fff;
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.card h1{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:18px;
+    margin:12px 0;
     color:#333;
 }
 
-.container{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.header{
-    background:#666;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-.profile{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    gap:30px;
-    padding:40px;
-}
-
-.profile img{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #999;
-}
-
-.info{
-    flex:1;
-    min-width:250px;
-}
-
-.info h2{
-    color:#444;
-    margin-bottom:15px;
-}
-
-.info p{
-    margin:10px 0;
-    font-size:18px;
-}
-
-.section{
-    padding:30px 40px;
-    border-top:1px solid #ddd;
-}
-
-.section h2{
-    margin-bottom:15px;
-    color:#555;
-}
-
-.section ul{
-    padding-left:20px;
-}
-
-.section li{
-    margin-bottom:10px;
-    font-size:17px;
-}
-
-.footer{
-    text-align:center;
-    background:#666;
-    color:white;
-    padding:15px;
+.card strong{
+    color:#666;
 }
 </style>
 
 </head>
 <body>
 
-<div class="container">
+<div class="card">
+    <h1>ประวัติส่วนตัว</h1>
 
-    <div class="header">
-        <h1>My Profile</h1>
-        <p>ประวัติส่วนตัว</p>
-    </div>
-
-    <div class="profile">
-        <img src="images/profile.jpg" alt="Profile">
-        
-        <div class="info">
-            <h2>ข้อมูลส่วนตัว</h2>
-            <p><strong>ชื่อ:</strong> กุศลิน ชุมทัพวงษ์</p>
-            <p><strong>ชื่อเล่น:</strong> ใบเฟิร์น</p>
-            <p><strong>วันเกิด:</strong> 27 พฤศจิกายน 2551</p>
-            <p><strong>อายุ:</strong> 17 ปี</p>
-            <p><strong>อีเมล:</strong> kkusalin4@email.com</p>
-            <p><strong>เบอร์โทร:</strong> 098-xxx-xxxx</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>ประวัติการศึกษา</h2>
-        <ul>
-            <li>ระดับประถมศึกษา : โรงเรียนบ้านหัวนาคำ</li>
-            <li>ระดับมัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์</li>
-            <li>ระดับมัธยมศึกษาตอนปลาย : โรงเรียนพานทอง</li>
-        </ul>
-    </div>
-
-    
-
-    <div class="section">
-        <h2>งานอดิเรก</h2>
-        <ul>
-            <li>ฟังเพลง</li>
-            <li>ดูหนัง</li>
-            <li>เล่นเกม</li>
-        </ul>
-    </div>
-
-    <div class="footer">
-        © 2026 My Portfolio
-    </div>
-
+    <p><strong>ชื่อ :</strong> กุศลิน ชุมทัพวงษ์</p>
+    <p><strong>ชื่อเล่น :</strong> ใบเฟิร์น</p>
+    <p><strong>วันเกิด :</strong> 27 พฤศจิกายน 2551</p>
+    <p><strong>อายุ :</strong> 17 ปี</p>
 </div>
 
 </body>
